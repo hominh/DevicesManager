@@ -82,14 +82,14 @@ void TcpConnections::accept(qintptr handle, TcpConnection *connection)
     QTcpSocket *socket = new QTcpSocket(this);
     if(!socket->setSocketDescriptor(handle))
     {
-        qWarning() << this << "could not accept connection " << handle;
+        qDebug() << this << "could not accept connection " << handle;
         connection->deleteLater();
         return;
     }
     connect(socket,&QTcpSocket::disconnected,this,&TcpConnections::disconnected);
     connect(socket,static_cast<void (QTcpSocket::*)(QAbstractSocket::SocketError)>(&QTcpSocket::error),this,&TcpConnections::error);
 
-    connection->moveToThread(QThread::currentThread());
+    connection->moveToThread(QThread::currentThread()); //Thread connection
     connection->setSocket(socket);
 
     m_connections.insert(socket,connection);

@@ -9,6 +9,7 @@
 #include <QReadWriteLock>
 #include "tcpconnection.h"
 #include "tcpconnection.h"
+#include <QTimer>
 
 class TcpConnections : public QObject
 {

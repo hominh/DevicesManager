@@ -35,4 +35,5 @@ HEADERS += \
     databaseconnection.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    device.ui
