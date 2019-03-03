@@ -67,6 +67,9 @@ void TcpConnection::readyRead()
     QDateTime currentDateTime = QDateTime::currentDateTime();
     QString strCurrentDateTime = currentDateTime.toString("yyyyMMddhhmmss");
     update2DB(listTmp[4],listTmp[2],listTmp[3],strCurrentDateTime,listTmp[1] );
+
+    //update lai tableview
+
     for(int i=0; i < Data.length(); i++)
     {
         RxByte = Data[i];
@@ -90,8 +93,6 @@ void TcpConnection::readyRead()
             }
         }
     }// time out o day nua, neu ma 10s ko gui goi nào len thi disconnet
-    //str = "123";
-    emit dataReceived("QString");
 }
 
 void TcpConnection::sendData(void)

@@ -32,6 +32,10 @@ private slots:
     void on_pushButtonSetUp_clicked();
     void on_pushButtonCancel_clicked();
 
+    void on_pushButtonFilter_clicked();
+
+    void on_pushButtonCancel_2_clicked();
+
 public slots:
 
 
@@ -39,11 +43,10 @@ public slots:
 private:
     Ui::MainWindow *ui;
     DatabaseConnection *dbConnection;
-    QSqlQueryModel *model;
+    QSqlQueryModel *model,*modelDevice;
     void SetupTablView(QSqlQueryModel *model);
     void incomingConnection(int socketDescriptor);
     TcpConnection *tcpconnection;
-    QTcpSocket *clientSocket;
     TcpServer m_server;
 
 };

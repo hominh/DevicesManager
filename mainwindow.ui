@@ -6,19 +6,22 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1134</width>
-    <height>602</height>
+    <width>1042</width>
+    <height>410</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Device manager software</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QVBoxLayout" name="verticalLayout">
-    <item>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
@@ -27,42 +30,42 @@
        <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="7">
-           <widget class="QLabel" name="label_7">
-            <property name="text">
-             <string>Giờ kết thúc</string>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxDeviceType"/>
+          </item>
+          <item row="2" column="0" colspan="12">
+           <widget class="QTableView" name="tableView">
+            <property name="sortingEnabled">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
-          <item row="1" column="5">
-           <widget class="QLabel" name="label_6">
+          <item row="1" column="2">
+           <widget class="QLabel" name="label_4">
             <property name="text">
-             <string>Phút bắt đầu</string>
+             <string>Tên thiết bị</string>
             </property>
            </widget>
-          </item>
-          <item row="1" column="9">
-           <widget class="QPushButton" name="pushButtonCancel">
-            <property name="text">
-             <string>Hủy bỏ</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="6">
-           <widget class="QComboBox" name="comboBoxHourStart"/>
           </item>
           <item row="0" column="8">
            <widget class="QComboBox" name="comboBoxHourFinish"/>
           </item>
-          <item row="0" column="9">
+          <item row="0" column="3" colspan="2">
+           <widget class="QComboBox" name="comboBoxIp"/>
+          </item>
+          <item row="0" column="11">
            <widget class="QPushButton" name="pushButtonSetUp">
             <property name="text">
              <string>Lập lịch làm việc</string>
             </property>
            </widget>
           </item>
-          <item row="2" column="0" colspan="10">
-           <widget class="QTableView" name="tableView"/>
+          <item row="1" column="7">
+           <widget class="QLabel" name="label_8">
+            <property name="text">
+             <string>Phút kết thúc</string>
+            </property>
+           </widget>
           </item>
           <item row="0" column="2">
            <widget class="QLabel" name="label_3">
@@ -74,46 +77,23 @@
           <item row="0" column="1">
            <widget class="QComboBox" name="comboBoxFloor"/>
           </item>
-          <item row="1" column="4">
-           <widget class="QComboBox" name="comboBoxDevice"/>
+          <item row="1" column="8">
+           <widget class="QComboBox" name="comboBoxMinuteFinish"/>
+          </item>
+          <item row="1" column="6">
+           <widget class="QComboBox" name="comboBoxMinuteStart"/>
+          </item>
+          <item row="0" column="7">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Giờ kết thúc</string>
+            </property>
+           </widget>
           </item>
           <item row="1" column="0">
            <widget class="QLabel" name="label_2">
             <property name="text">
              <string>Loại thiết bị</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QComboBox" name="comboBoxDeviceType"/>
-          </item>
-          <item row="1" column="7">
-           <widget class="QLabel" name="label_8">
-            <property name="text">
-             <string>Phút kết thúc</string>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="3" colspan="2">
-           <widget class="QComboBox" name="comboBoxIp"/>
-          </item>
-          <item row="1" column="2" colspan="2">
-           <widget class="QLabel" name="label_4">
-            <property name="text">
-             <string>Tên thiết bị</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="6">
-           <widget class="QComboBox" name="comboBoxMinuteStart"/>
-          </item>
-          <item row="1" column="8">
-           <widget class="QComboBox" name="comboBoxMinuteFinish"/>
-          </item>
-          <item row="0" column="5">
-           <widget class="QLabel" name="label_5">
-            <property name="text">
-             <string>Giờ bắt đầu</string>
             </property>
            </widget>
           </item>
@@ -124,14 +104,161 @@
             </property>
            </widget>
           </item>
+          <item row="1" column="5">
+           <widget class="QLabel" name="label_6">
+            <property name="text">
+             <string>Phút bắt đầu</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="11">
+           <widget class="QPushButton" name="pushButtonCancel">
+            <property name="text">
+             <string>Hủy bỏ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="3" colspan="2">
+           <widget class="QComboBox" name="comboBoxDevice"/>
+          </item>
+          <item row="0" column="6">
+           <widget class="QComboBox" name="comboBoxHourStart"/>
+          </item>
+          <item row="0" column="5">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Giờ bắt đầu</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="9">
+           <widget class="QLabel" name="label_17">
+            <property name="text">
+             <string>Thứ</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="10">
+           <widget class="QComboBox" name="comboBoxDay"/>
+          </item>
          </layout>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_2">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
        <attribute name="title">
-        <string>Device manager</string>
+        <string>History</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="0" column="0">
+           <layout class="QGridLayout" name="gridLayout_3">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_9">
+              <property name="text">
+               <string>Tầng</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="comboBoxFloor_2"/>
+            </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Ip</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="3">
+             <widget class="QComboBox" name="comboBoxIp_2"/>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="label_11">
+              <property name="text">
+               <string>Giờ bắt đầu</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="5">
+             <widget class="QComboBox" name="comboBoxHourStart_2"/>
+            </item>
+            <item row="0" column="6">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Giờ kết thúc</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="7">
+             <widget class="QComboBox" name="comboBoxHourFinish_2"/>
+            </item>
+            <item row="0" column="8">
+             <widget class="QPushButton" name="pushButtonFilter">
+              <property name="text">
+               <string>Tra cứu</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_16">
+              <property name="text">
+               <string>Loại thiết bị</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBoxDeviceType_2"/>
+            </item>
+            <item row="1" column="2">
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>Tên thiết bị</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="3">
+             <widget class="QComboBox" name="comboBoxDevice_2"/>
+            </item>
+            <item row="1" column="4">
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>Phút bắt đầu</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="5">
+             <widget class="QComboBox" name="comboBoxMinuteStart_2"/>
+            </item>
+            <item row="1" column="6">
+             <widget class="QLabel" name="label_14">
+              <property name="text">
+               <string>Phút kết thúc</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="7">
+             <widget class="QComboBox" name="comboBoxMinuteFinish_2"/>
+            </item>
+            <item row="1" column="8">
+             <widget class="QPushButton" name="pushButtonCancel_2">
+              <property name="text">
+               <string>Hủy bỏ</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <widget class="QTableView" name="tableViewResult"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>
@@ -142,10 +269,17 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1134</width>
+     <width>1042</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu1">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menu1"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -156,6 +290,11 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

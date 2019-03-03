@@ -115,7 +115,6 @@ private:
     TimeWork16DevInWeek  TimeSetUpDev[MAX_DEVICE_IN_SERVER];
 
 signals:
-    void dataReceived(QString data);
 };
 
 #endif // TCPCONNECTION_H
